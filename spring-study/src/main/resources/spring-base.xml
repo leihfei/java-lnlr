@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+>
+
+    <!--id在同一个xml中唯一，在不同的xml中被覆盖-->
+    <bean id="book" class="com.lnlr.base.Book">
+        <property name="id" value="1"></property>
+        <property name="author" value="lnlr"></property>
+        <property name="title">
+            <value>测试book</value>
+        </property>
+    </bean>
+
+    <!--这种定义都将是同一个对象-->
+    <bean name="book1 book2 book3" class="com.lnlr.base.Book"></bean>
+    <alias name="book3" alias="book4"></alias>
+
+
+    <bean id="bookFactory"
+          class="com.lnlr.base.BookFactory"
+          factory-method="createInstance"
+    >
+    </bean>
+
+
+    <!--
+        c-namespace是针对构造函数赋值
+        p-namespace是针对属性赋值
+    -->
+    <bean id="cBook" class="com.lnlr.base.Book" c:author="雷洪飞1号" ></bean>
+
+    <!--使用注解-->
+    <context:annotation-config />
+    <!--使用包扫描,自动包括annitation-config-->
+    <context:component-scan base-package="com.lnlr">
+        <context:exclude-filter type="regex" expression=".*.lnlr"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+    </context:component-scan>
+</beans>

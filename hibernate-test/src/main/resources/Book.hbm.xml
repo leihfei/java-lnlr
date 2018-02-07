@@ -12,7 +12,7 @@
 
 <hibernate-mapping package="com.lnlr.demo1.entity">
     <class name="Book" table="lnlr_book">
-        <id name="id" column="id" length="32" type="string">
+        <id name="id" column="id">
             <generator class="native"></generator>
         </id>
 
