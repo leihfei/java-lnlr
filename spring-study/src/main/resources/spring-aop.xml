@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+>
+    <!--base annotation use aop-->
+    <aop:aspectj-autoproxy/>
+
+    <bean id="userDao" class="com.lnlr.aop.UserDao"></bean>
+    <bean id="aop" class="com.lnlr.aop.Aop"></bean>
+
+    <!--配置aop  base xml-->
+    <!--<aop:config>-->
+        <!--<aop:pointcut id="pt" expression="execution(* com.lnlr.aop..*.*(..))"></aop:pointcut>-->
+        <!--<aop:aspect ref="aop">-->
+            <!--<aop:after method="befor" pointcut-ref="pt"></aop:after>-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+
+
+</beans>

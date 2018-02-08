@@ -7,12 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="generator-code" />
+        <module name="hibernate-test" />
         <module name="jwt-demo" />
+        <module name="spring-study" />
+        <module name="static-file-upload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="generator-code" target="1.8" />
+      <module name="hibernate-test" target="1.5" />
       <module name="jwt-demo" target="1.8" />
+      <module name="spring-study" target="1.5" />
+      <module name="static-file-upload" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

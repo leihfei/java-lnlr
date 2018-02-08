@@ -10,15 +10,12 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.lnlr.demo1.entity">
-    <class name="Book" table="book">
+<hibernate-mapping package="com.lnlr.base">
+    <class name="Book" table="lnlr_book">
         <id name="id" column="id">
             <generator class="native"></generator>
         </id>
-
-        <property name="title" not-null="true" length="50" type="string"/>
-
-        <property name="author" not-null="true" length="50" type="string"/>
-
+        <property name="title" />
+        <property name="author" />
     </class>
 </hibernate-mapping>
