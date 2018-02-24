@@ -33,11 +33,7 @@
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>RELEASE</version>
-        </dependency>
+
         <!--spring基本配置 结束-->
 
         <!--Aop配置和事务-->
@@ -132,6 +128,7 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>RELEASE</version>
         </dependency>
+
 
     </dependencies>
 </project>
